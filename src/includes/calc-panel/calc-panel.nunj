@@ -1,0 +1,31 @@
+{% from "../../components/goods/goods.nunj" import goods %}
+
+<aside class="calc-panel">
+    <div class="calc-panel__goods">
+        <h2 class="calc-panel__goods-title">My basket</h2>
+        {{ goods() }}
+    </div>
+    <div class="calc-panel__promo">
+        <h2 class="calc-panel__promo-title">Promo code</h2>
+        <div class="calc-panel__promo-content">
+          <label class="calc-panel__promo-code" for="promocode">
+            <input class="calc-panel__promo-input" type="text" placeholder="Placeholder Text" id="promocode" />
+          </label>
+          <button class="btn calc-panel__promo-btn">Apply</button>
+        </div>
+    </div>
+    <div class="calc-panel__price">
+        <div class="calc-panel__price-titles">
+          <p class="calc-panel__price-title">Subtotal</p>
+          <p class="calc-panel__price-title">Tax</p>
+          <p class="calc-panel__price-title">Shipping</p>
+          <p class="calc-panel__price-title calc-panel__price-title_total">Total</p>
+        </div>
+        <div class="calc-panel__price-values">
+          <p class="calc-panel__price-value sub-total"></p>
+          <p class="calc-panel__price-value tax"></p>
+          <p class="calc-panel__price-value shipping"></p>
+          <p class="calc-panel__price-value calc-panel__price-value_total total"></p>
+        </div>
+    </div>
+</aside>

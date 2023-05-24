@@ -1,0 +1,29 @@
+<header class="header">
+    <a class="header__logo logo" href="/" title="Back to home">
+		{{ icon({
+			iconName: 'logo',
+			className: 'header__logo-icon icon',
+			attributes: 'viewBox="0 0 89 32" style="width: 89px; height: 32px; fill: none;"'
+		}) }}
+    </a>
+    <div class="header__controls">
+        <a class="header__search" href="#" title="Search">
+			{{ icon({
+				iconName: 'search',
+				className: 'header__search-icon icon',
+				attributes: 'viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: none"'
+			}) }}
+        </a>
+        <a class="header__cart" href="#" title="Cart">
+			{{ icon({
+				iconName: 'cart',
+				className: 'header__cart-icon icon',
+				attributes: 'viewBox="0 0 24 21" style="width: 24px; height: 21px; fill: none;"'
+			}) }}
+            <span class="header__added-cart"></span>
+        </a>
+    	<div class="header__burger">
+            <span class="header__burger-icon"></span>
+        </div>
+    </div>
+</header>

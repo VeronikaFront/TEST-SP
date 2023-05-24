@@ -1,0 +1,19 @@
+<div class="progress-bar">
+    <div class="progress-bar__line"></div>
+    <div class="progress-bar__step">
+        <div class="progress-bar__number progress-bar__number_prev">1</div>
+        <div class="progress-bar__name">Account</div>
+    </div>
+    <div class="progress-bar__step">
+        <div class="progress-bar__number progress-bar__number_prev">2</div>
+        <div class="progress-bar__name">Shipping</div>
+    </div>
+    <div class="progress-bar__step">
+        <div class="progress-bar__number progress-bar__number_current">3</div>
+        <div class="progress-bar__name">Billing</div>
+    </div>
+    <div class="progress-bar__step">
+        <div class="progress-bar__number">4</div>
+        <div class="progress-bar__name">Review</div>
+    </div>
+</div>

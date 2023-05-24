@@ -1,0 +1,104 @@
+.progress-bar {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	position: relative;
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto 60px;
+
+	&__line {
+		background-color: #d5d5d5;
+		position: absolute;
+		top: calc(50% - 30px);
+		left: 0%;
+		-webkit-transform: translateY(calc(-50% + 18px));
+		-ms-transform: translateY(calc(-50% + 18px));
+		transform: translateY(calc(-50% + 18px));
+		height: 1px;
+		width: calc(100% - 40px);
+		z-index: -1;
+		-webkit-transition: 0.4s ease;
+		-o-transition: 0.4s ease;
+		transition: 0.4s ease;
+		margin-left: 20px;
+	}
+
+	&:before {
+		content: '';
+		background-color: #3366ff;
+		position: absolute;
+		top: calc(50% - 30px);
+		left: 0%;
+		-webkit-transform: translateY(calc(-50% + 18px));
+		-ms-transform: translateY(calc(-50% + 18px));
+		transform: translateY(calc(-50% + 18px));
+		height: 1px;
+		width: calc(66.666% - 20px);
+		z-index: -1;
+		margin-left: 20px;
+	}
+
+	&__step {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		gap: 9px;
+	}
+
+	&__number {
+		background-color: #fff;
+		color: #d5d5d5;
+		border: 1px solid #d5d5d5;
+		font-weight: 500;
+		font-size: 10px;
+		line-height: 150%;
+		border-radius: 50%;
+		height: 18px;
+		width: 18px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-transition: 0.4s ease;
+		-o-transition: 0.4s ease;
+		transition: 0.4s ease;
+	}
+
+	&__number_prev {
+		background-color: #3366ff;
+		border: 1px solid#3366FF;
+		color: #fff;
+	}
+	&__number_current {
+		border: 1px solid#3366FF;
+		color: #000;
+	}
+
+	&__name {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	@media screen and (max-width: 1100px) {
+		& {
+			max-width: 640px;
+		}
+	}
+}

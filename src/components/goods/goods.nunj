@@ -1,0 +1,45 @@
+{% from "../icon/icon.nunj" import icon %}
+{% macro goods() %}
+	<ul class="calc-panel__goods-list goods-list">
+		{% for good in goodItems %}
+            <li class="calc-panel__good goods-list__item">
+                <picture class="calc-panel__good-picture goods-list__item-picture">
+                    <source srcset="{{ good.imageWpUrl }}">
+                    <img class="goods-list__item-image calc-panel__good-image" src="{{ good.imageUrl }}" alt="{{ good.alt }}" width="100px" height="100px">
+                </picture>
+                <div class="goods-list__item-description calc-panel__good-description">
+                    <h3 class="goods-list__item-name calc-panel__good-name">
+                    {{ good.name }}
+                    </h3>
+                    <div class="calc-panel__good-stepper stepper">
+                        <button class="stepper__minus"> 
+                            {{ icon ({
+                                iconName: 'minus',
+                                className: 'stepper__minus-icon',
+                                attributes: 'viewBox="0 0 21 20" style="width: 21px; height: 20px; fill: none"'
+                            }) }}
+                        </button>
+                        <input class="stepper__value" type="text" value="1">
+                        <button class="stepper__plus"> 
+                            {{ icon ({
+                                iconName: 'plus',
+                                className: 'stepper__plus-icon',
+                                attributes: 'viewBox="0 0 21 20" style="width: 21px; height: 20px; fill: none"'
+                            }) }}
+                        </button> 
+                    </div>
+                    <div class="goods-list__item-price calc-panel__good-price">
+                       $ {{ good.price }}
+                    </div>
+                </div>
+                <div class="goods-list__item-delete calc-panel__good-delete">
+                    {{ icon ({
+                        iconName: 'delete',
+                        className: 'goods-list__item-delete-icon',
+                        attributes: 'viewBox="0 0 19 18" style="width: 19px; height: 18px; fill: none"'
+                    }) }}
+                </div>
+			</li>
+		{% endfor %}
+	</ul>
+{% endmacro %}

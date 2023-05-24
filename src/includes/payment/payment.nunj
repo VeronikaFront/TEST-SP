@@ -1,0 +1,95 @@
+<section class="payment">
+    <h1 class="payment__title">Billing Information</h1>
+    <form class="payment__form">
+        <fieldset class="payment__form-choice">
+            <label class="payment__choice-item" for="credit-card">
+                <input
+                  class="payment__choice-input-radio"
+                  type="radio"
+                  name="choice-pay"
+                  id="credit-card"
+                  checked
+                />
+                Pay with Credit Card
+            </label>
+            <label class="payment__choice-item" for="paypal">
+                <input
+                  class="payment__choice-input-radio"
+                  type="radio"
+                  name="choice-pay"
+                  id="paypal"
+                />
+                {{ icon({
+                    iconName: 'paypal',
+                    className: 'paypal-icon icon',
+                    attributes: 'viewBox="0 0 85 23" style="width: 85px; height: 23px; fill: none;"'
+                }) }}
+            </label>
+        </fieldset>
+        <fieldset class="payment__form-card">
+            <label class="payment__card-item" for="card-name">
+                  <span class="payment__form-text">Name on card</span>
+                  <input
+                    class="payment__card-input"
+                    placeholder="Placeholder Text"
+                    type="text"
+                    id="card-name"
+                    pattern="[A-Za-z]*[ ]{1}[A-Za-z]*"
+                  />
+            </label>
+            <label class="payment__card-item" for="card-number">
+                  <span class="payment__form-text">Card number</span>
+                  <div class="payment__card-number-group">
+                    <input class="payment__card-input" type="text" id="card-number" pattern="[0-9]{4}" maxlength="4" size="4" onkeyup="changeFocus(this);"/>
+                    <input class="payment__card-input" type="text" id="card-number-two" pattern="[0-9]{4}" maxlength="4" size="4" onkeyup="changeFocus(this);"/>
+                    <input class="payment__card-input" type="text" id="card-number-three" pattern="[0-9]{4}" maxlength="4" size="4" onkeyup="changeFocus(this);"/>
+                    <input class="payment__card-input" type="text" id="card-number-four" pattern="[0-9]{4}" maxlength="4" size="4" onkeyup="changeFocus(this);"/>
+                  </div>
+            </label>
+            <label class="payment__card-item payment__card-item_w-100" for="card-date">
+                  <span class="payment__form-text">Expire date</span>
+                  <input class="payment__card-input" type="text" id="card-date" maxlength="7" pattern="[0-9]{2}[ ]{1}[/]{1}[ ]{1}[0-9]{2}"/>
+            </label>
+            <label class="payment__card-item payment__card-item_w-100" for="card-code">
+                  <div class="payment__card-text-wrapper">
+                    <span class="payment__form-text">CVV code</span>
+                    <div class="payment__card-helper helper">
+                      <span class="helper__icon">?</span>
+                      <div class="helper__content">
+                        трёхзначный код проверки подлинности карты
+                      </div>
+                    </div>
+                  </div>
+                  <input class="payment__card-code-input payment__card-input" type="password" id="card-code" pattern="[0-9]{3}" maxlength="3"/>
+            </label>
+        </fieldset>
+        <fieldset class="payment__form-checks">
+            <label class="payment__checks-item" for="card-save">
+                <input class="payment__checks-input" type="checkbox" id="card-save" />
+                <span class="payment__checks-text">Save information of this credit card</span>
+            </label>
+            <label class="payment__checks-item" for="accept-terms">
+                <input class="payment__checks-input" type="checkbox" id="accept-terms" />
+                <span class="payment__checks-text">I accept <a class="payment__checks-link" href="#" title="the terms and comditions">the terms and comditions</a> and the<a class="payment__checks-link" href="#" title="Privacy Policies"> Privacy Policies</a> </span>
+            </label>
+        </fieldset>
+        <div class="payment__form-controls">
+            <button class="btn btn_bg-transparent payment__form-btn"> Back </button>
+            <button class="btn payment__form-btn">Check Out</button>
+        </div>
+    </form>
+</section>
+
+<script>
+    function changeFocus(input) {
+      const maxLength = input.getAttribute('maxlength');
+      if (maxLength && input.value.length >= maxLength) {
+        do {
+          input = input.nextSibling;
+        } while (input && !/text/.test(input.type));
+        if (input && /text/.test(input.type)) {
+          input.focus();
+        }
+      }
+    }
+</script>

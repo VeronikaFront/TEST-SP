@@ -1,0 +1,20 @@
+{% extends "../templates/base.nunj" %}
+
+{% from "../components/icon/icon.nunj" import icon %}
+
+{% block content %}
+
+	{% include '../includes/header/header.nunj' %}
+
+	<div class="flex-container">
+    	<main class="pay">
+      		<div class="container">
+				{% include '../includes/progress-bar/progress-bar.nunj' %}
+				{% include '../includes/payment/payment.nunj' %}
+			</div>
+		</main>
+		{% include '../includes/calc-panel/calc-panel.nunj' %}
+	</div>
+
+	</div>
+{% endblock %}

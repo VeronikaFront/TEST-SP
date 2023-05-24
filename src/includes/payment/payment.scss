@@ -1,0 +1,345 @@
+.payment {
+	width: 100%;
+	max-width: 660px;
+	margin: 0 auto;
+
+	&__title {
+		padding-left: 30px;
+		margin-bottom: 40px;
+		margin-top: 0;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 21px;
+	}
+
+	&__choice-item {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		gap: 9px;
+	}
+
+	&__form-choice {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		gap: 82px;
+		margin: 0 0 40px 0;
+		padding: 0 0 0 30px;
+		border: none;
+	}
+
+	&__choice-input-radio {
+		margin: 0;
+		width: 18px;
+		height: 18px;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		border-radius: 50px;
+		background: $color_white;
+		border: 1px solid #cfcfcf;
+		position: relative;
+		cursor: pointer;
+	}
+
+	&__choice-input-radio:checked:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		width: 8px;
+		height: 8px;
+		background-color: $color_blue;
+		border-radius: 50px;
+	}
+
+	&__form-card {
+		border: 1px solid #cfcfcf;
+		-webkit-box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.19);
+		box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.19);
+		border-radius: 5px;
+		padding: 20px 30px 46px;
+		margin: 0 0 40px 0;
+		max-width: 550px;
+		width: 100%;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		gap: 20px 30px;
+	}
+
+	&__card-item {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	&__card-item_w-100 {
+		max-width: 100px;
+	}
+
+	&__form-text {
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 24px;
+		color: #555770;
+	}
+
+	&__card-input {
+		background: #ededf1;
+		border-radius: 3px;
+		border: none;
+		min-height: 40px;
+		display: block;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 24px;
+		color: #8e90a6;
+		padding: 8px 10px;
+		font-family: $font-family;
+	}
+
+	&__card-input:not(:focus):invalid {
+		-webkit-box-shadow: 0px 0px 3px 2px rgba(255, 0, 0, 0.4);
+		box-shadow: 0px 0px 3px 2px rgb(255 0 0 / 40%);
+	}
+
+	&__card-number-group {
+		display: -ms-grid;
+		display: grid;
+		-ms-grid-columns: 100px 30px 100px 30px 100px 30px 100px;
+		grid-template-columns: repeat(4, 100px);
+		gap: 30px;
+		width: 100%;
+	}
+
+	&__card-text-wrapper {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		gap: 5px;
+		position: relative;
+	}
+
+	&__form-checks {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+		color: #8c8c8c;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		gap: 14px;
+		margin: 0 0 40px 0;
+		padding: 0 0 0 30px;
+		border: none;
+	}
+
+	&__checks-item {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		gap: 8px;
+	}
+
+	&__checks-input {
+		background: $color_white;
+		border: 1px solid #cfcfcf;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		width: 18px;
+		height: 18px;
+		position: relative;
+		margin: 0;
+		cursor: pointer;
+	}
+
+	&__checks-input:checked:before {
+		content: '';
+		width: 8px;
+		height: 8px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		background: $color_blue;
+	}
+
+	&__checks-link {
+		color: $color_black;
+	}
+
+	&__form-controls {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		padding-left: 30px;
+	}
+
+	&__checks-text {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	@media screen and (max-width: 1200px) {
+		& {
+			margin-left: 0;
+		}
+	}
+
+	@media screen and (max-width: 690px) {
+		&__title {
+			padding: 0;
+		}
+
+		&__form-choice {
+			padding: 0;
+		}
+
+		&__form-checks {
+			padding: 0;
+		}
+
+		&__form-controls {
+			padding: 0;
+		}
+
+		&__card-number-group {
+			gap: 10px;
+		}
+
+		&__form-card {
+			gap: 10px;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+		&__card-input {
+			max-width: 430px;
+		}
+	}
+
+	@media screen and (max-width: 520px) {
+		&__title {
+			padding-left: 0;
+			margin-bottom: 20px;
+		}
+
+		&__form-choice {
+			padding: 0;
+			margin: 0 0 20px 0;
+			gap: 22px;
+		}
+
+		&__form-checks {
+			padding: 0;
+			margin: 0 0 45px 0;
+		}
+
+		&__form-controls {
+			padding: 0;
+		}
+
+		&__form-card {
+			margin: 0 0 36px 0;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			border: none;
+			padding: 0;
+			gap: 20px 5px;
+		}
+
+		&__card-number-group {
+			-ms-grid-columns: 71px 5px 71px 5px 71px 5px 71px;
+			grid-template-columns: repeat(4, 71px);
+			gap: 5px;
+		}
+
+		&__card-item_w-100 {
+			max-width: 71px;
+		}
+		&__card-input {
+			max-width: 300px;
+		}
+	}
+}
+
+.paypal-icon {
+	width: 85px;
+	height: 23px;
+	margin-left: 5px;
+}
+
+.helper {
+	&__icon {
+		background: #dbdbdb;
+		width: 13px;
+		height: 13px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		border-radius: 50px;
+		font-weight: 400;
+		font-size: 10px;
+		line-height: 150%;
+		cursor: help;
+	}
+
+	&__content {
+		display: none;
+	}
+
+	&:hover &__content {
+		display: block;
+		position: absolute;
+		background: #dbdbdb;
+		width: 120px;
+		padding: 5px;
+		border-radius: 3px;
+		color: $color_black;
+		top: 0;
+		font-weight: 400;
+		font-size: 10px;
+		line-height: 150%;
+	}
+}

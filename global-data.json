@@ -1,0 +1,19 @@
+{
+	"goodItems": [
+		{
+			"name": "Amet minim mollit non deserunt ullamco est sit",
+			"imageUrl" : "/assets/images/good-1.png",
+	        "imageWpUrl" : "/assets/images/good-1.webp",
+	        "alt" : "Футболка",
+	        "price" : "525"
+		},
+		{
+			"name": "Amet minim mollit non",
+			"imageUrl" : "/assets/images/good-2.png",
+	        "imageWpUrl" : "/assets/images/good-2.webp",
+	        "alt" : "Кроссовки",
+	        "price" : "525"
+		}
+		
+	]
+}
