@@ -1,5 +1,5 @@
 const burgerClassName = '.header__burger';
-const burgerActiveClassName = '.header__burger_active';
+const burgerActiveClassName = 'header__burger_active';
 const burger = document.querySelector(burgerClassName);
 const calcPanelClassName = '.calc-panel';
 const calcPanelOpenClassName = 'calc-panel_open';
